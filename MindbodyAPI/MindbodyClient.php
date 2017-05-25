@@ -29,8 +29,8 @@ class MindbodyClient extends \SoapClient {
 	
 	public static function credentials($sourcename = null, $password = null, Array $siteids = null) {
 		$credentials = new structures\SourceCredentials;
-		$credentials->SourceName = env('MBO_API_USER');
-		$credentials->Password = env('MBO_API_PASS');
+                $credentials->SourceName = Config::get("neptrox.mbo.api_user");
+		$credentials->Password = Config::get("neptrox.mbo.api_pass");
 		$credentials->SiteIDs = $siteids;
 		
 		return $credentials;
