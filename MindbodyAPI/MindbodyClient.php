@@ -1,5 +1,6 @@
 <?php
 namespace MindbodyAPI;
+use Config;
 class MindbodyClient extends \SoapClient {
 	public static $classmap = array();
 
